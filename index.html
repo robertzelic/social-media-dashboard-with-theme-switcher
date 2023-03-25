@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Frontend Mentor - Social media dashboard with theme switcher"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Social media dashboard with theme switcher</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <div class="title-group">
+          <h1 class="title">Social Media Dashboard</h1>
+          <p class="followers">Total Followers: 23,004</p>
+        </div>
+        <div class="dark-mode-line">
+          <label class="toggle">
+            <span class="toggle-label">Dark Mode</span>
+            <input class="toggle-checkbox" type="checkbox" />
+            <span class="toggle-switch"></span>
+          </label>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <ul class="card-list">
+          <li class="card facebook">
+            <a href="#">
+              <div class="user">
+                <img src="./images/icon-facebook.svg" alt="Facebook" />
+                <p>@nathanf</p>
+              </div>
+              <p class="number">1987</p>
+              <p class="followers-text">Followers</p>
+              <div class="today">
+                <img src="./images/icon-up.svg" alt="Up" />
+                <p class="green-text">12 Today</p>
+              </div>
+            </a>
+          </li>
+          <li class="card twitter">
+            <a href="#">
+              <div class="user">
+                <img src="./images/icon-twitter.svg" alt="Twitter" />
+                <p>@nathanf</p>
+              </div>
+              <div class="number">1044</div>
+              <p class="followers-text">Followers</p>
+              <div class="today">
+                <img src="./images/icon-up.svg" alt="Up" />
+                <p class="green-text">99 Today</p>
+              </div>
+            </a>
+          </li>
+          <li class="card instagram">
+            <a href="#">
+              <div class="user">
+                <img src="./images/icon-instagram.svg" alt="Instagram" />
+                <p>@realnathanf</p>
+              </div>
+              <div class="number">11k</div>
+              <p class="followers-text">Followers</p>
+              <div class="today">
+                <img src="./images/icon-up.svg" alt="Up" />
+                <p class="green-text">1099 Today</p>
+              </div>
+            </a>
+          </li>
+          <li class="card youtube">
+            <a href="#">
+              <div class="user">
+                <img src="./images/icon-youtube.svg" alt="YouTube" />
+                <p>Nathan F.</p>
+              </div>
+              <div class="number">8239</div>
+              <p class="followers-text">Subscribers</p>
+              <div class="today">
+                <img src="./images/icon-down.svg" alt="Down" />
+                <p class="red-text">144 Today</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <h2 class="overview-today">Overview - Today</h2>
+        <ul class="card-list">
+          <li class="card card-overview">
+            <a href="#">
+              <div class="card-flex-1">
+                <p>Page Views</p>
+                <img src="./images/icon-facebook.svg" alt="Facebook" />
+              </div>
+              <div class="card-flex-2">
+                <p class="number-small">87</p>
+                <div class="percentage">
+                  <img src="./images/icon-up.svg" alt="Up" />
+                  <p class="green-text">3%</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card card-overview">
+            <a href="#">
+              <div class="card-flex-1">
+                <p>Likes</p>
+                <img src="./images/icon-facebook.svg" alt="Facebook" />
+              </div>
+              <div class="card-flex-2">
+                <p class="number-small">52</p>
+                <div class="percentage">
+                  <img src="./images/icon-down.svg" alt="Down" />
+                  <p class="red-text">2%</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card card-overview">
+            <a href="#">
+              <div class="card-flex-1">
+                <p>Likes</p>
+                <img src="./images/icon-instagram.svg" alt="Instagram" />
+              </div>
+              <div class="card-flex-2">
+                <p class="number-small">5462</p>
+                <div class="percentage">
+                  <img src="./images/icon-up.svg" alt="Up" />
+                  <p class="green-text">2257%</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card card-overview">
+            <a href="#">
+              <div class="card-flex-1">
+                <p>Profile Views</p>
+                <img src="./images/icon-instagram.svg" alt="Instagram" />
+              </div>
+              <div class="card-flex-2">
+                <p class="number-small">52k</p>
+                <div class="percentage">
+                  <img src="./images/icon-up.svg" alt="Up" />
+                  <p class="green-text">1375%</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card card-overview">
+            <a href="#">
+              <div class="card-flex-1">
+                <p>Retweets</p>
+                <img src="./images/icon-twitter.svg" alt="Twitter" />
+              </div>
+              <div class="card-flex-2">
+                <p class="number-small">117</p>
+                <div class="percentage">
+                  <img src="./images/icon-up.svg" alt="Up" />
+                  <p class="green-text">303%</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card card-overview">
+            <a href="#">
+              <div class="card-flex-1">
+                <p>Likes</p>
+                <img src="./images/icon-twitter.svg" alt="Twitter" />
+              </div>
+              <div class="card-flex-2">
+                <p class="number-small">507</p>
+                <div class="percentage">
+                  <img src="./images/icon-up.svg" alt="Up" />
+                  <p class="green-text">553%</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card card-overview">
+            <a href="#">
+              <div class="card-flex-1">
+                <p>Likes</p>
+                <img src="./images/icon-youtube.svg" alt="YouTue" />
+              </div>
+              <div class="card-flex-2">
+                <p class="number-small">107</p>
+                <div class="percentage">
+                  <img src="./images/icon-down.svg" alt="Down" />
+                  <p class="red-text">19%</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card card-overview">
+            <a href="#">
+              <div class="card-flex-1">
+                <p>Total Views</p>
+                <img src="./images/icon-youtube.svg" alt="YouTue" />
+              </div>
+              <div class="card-flex-2">
+                <p class="number-small">1407</p>
+                <div class="percentage">
+                  <img src="./images/icon-down.svg" alt="Down" />
+                  <p class="red-text">12%</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

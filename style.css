@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+  --background: hsl(230, 17%, 14%);
+  --top-bg-pattern: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --card-bg-hover: hsl(228, 26%, 27%);
+  --text-primary: hsl(0, 0%, 100%);
+  --text-secondary: hsl(228, 34%, 66%);
+  --hr-line: var(--card-bg-hover);
+  --toggle-bg: hsl(230, 22%, 74%);
+  --overview-h2: var(--text-primary);
+  --dark-mode-label: var(--text-primary);
+  --switch-bg: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+body.light-theme {
+  --background: hsl(0, 0%, 100%);
+  --top-bg-pattern: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --card-bg-hover: hsl(232, 33%, 91%);
+  --text-primary: hsl(230, 17%, 14%);
+  --text-secondary: hsl(228, 12%, 44%);
+  --hr-line: var(--text-secondary);
+  --overview-h2: var(--text-secondary);
+  --dark-mode-label: var(--text-secondary);
+  --switch-bg: linear-gradient(var(--toggle-bg), var(--toggle-bg));
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 2.3125rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-inline-size: 25rem;
+  margin-inline: auto;
+  padding-inline: 1.625rem;
+}
+
+.header {
+  padding-block: 2rem;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-group {
+  margin-block-end: 1.5rem;
+}
+
+.dark-mode-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-block-start: 1px solid var(--hr-line);
+  padding-block-start: 0.875rem;
+}
+
+.followers {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.toggle {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.toggle-switch {
+  background: var(--switch-bg);
+  border-radius: 1.25rem;
+  width: 3rem;
+  height: 1.625rem;
+  position: relative;
+}
+
+.toggle-switch:before,
+.toggle-switch:after {
+  content: '';
+}
+
+.toggle-switch:before {
+  background-color: var(--card-bg);
+  border-radius: 50%;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  transition: left 0.2s;
+}
+
+.toggle-checkbox:checked + .toggle-switch::before {
+  left: 1.625rem;
+  background-color: var(--background);
+}
+
+.toggle-checkbox:checked:hover + .toggle-switch {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle-label {
+  color: var(--dark-mode-label);
+  font-weight: 700;
+  font-size: 0.875rem;
+  position: relative;
+}
+
+.card-list {
+  display: grid;
+  gap: 1.6rem;
+  padding-block: 1rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 0.4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.25rem;
+  z-index: 5;
+}
+
+.card.facebook::before {
+  background-color: var(--facebook);
+}
+
+.card.twitter::before {
+  background-color: var(--twitter);
+}
+
+.card.instagram::before {
+  background: var(--instagram);
+}
+
+.card.youtube::before {
+  background: var(--youtube);
+}
+
+.user,
+.today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user {
+  gap: 0.6rem;
+  padding-block: 2rem 1.2rem;
+}
+
+.today {
+  gap: 0.3rem;
+  font-weight: 700;
+  padding-block: 1.6rem 1.4rem;
+}
+
+.user p {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.number {
+  font-size: 3.375rem;
+  font-weight: 700;
+}
+
+.followers-text {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.3125rem;
+  text-indent: 0.1875rem;
+}
+
+.today p {
+  font-size: 0.75rem;
+}
+
+.green-text {
+  color: var(--lime-green);
+}
+
+.red-text {
+  color: var(--bright-red);
+}
+
+.overview-today {
+  color: var(--overview-h2);
+  padding-block: 2rem 1rem;
+}
+
+.card-flex-1,
+.card-flex-2 {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1.6rem;
+}
+
+.card-flex-1 {
+  align-items: center;
+  padding-block: 1.6rem 1.3rem;
+}
+
+.card-flex-1 p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.card-flex-2 {
+  align-items: baseline;
+  padding-block-end: 1.2rem;
+}
+
+.number-small {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.percentage {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@media (min-width: 37.5em) {
+  .container {
+    max-inline-size: 35rem;
+  }
+
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 70em) {
+  .container {
+    max-inline-size: 72.5rem;
+  }
+
+  .header {
+    background-color: var(--top-bg-pattern);
+    padding-block-end: 8rem;
+  }
+
+  main {
+    margin-block-start: -7.6rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .card-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card-list li:hover {
+    background-color: var(--card-bg-hover);
+  }
+
+  .header-container {
+    flex-direction: initial;
+    justify-content: space-between;
+  }
+
+  .dark-mode-line {
+    gap: 1rem;
+    border-block-start: none;
+    padding-block-start: 0;
+  }
+
+  .overview-today {
+    padding-block: 2rem 0.5rem;
+  }
+}
